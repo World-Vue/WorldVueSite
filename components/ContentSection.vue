@@ -1,18 +1,20 @@
 <template>
   <div class="section-first" :class="getBgColorClass">
-    <h1 class="title">
-      {{ title }}
-    </h1>
-    <h2 class="subtitle">
-      {{ subtitle }}
-    </h2>
-    <p>
-      {{ text }}
-    </p>
-    <div v-if="!!linkUrl" class="links">
-      <a :href="linkUrl" target="_blank" class="button--grey">
-        {{ linkTitle }}
-      </a>
+    <div class="section-content">
+      <h2 class="text">
+        {{ title }}
+      </h2>
+      <h3 class="subtitle">
+        {{ subtitle }}
+      </h3>
+      <div class="section-text">
+        <slot name="text"></slot>
+      </div>
+      <div v-if="!!linkUrl" class="links">
+        <a :href="linkUrl" target="_blank">
+          {{ linkTitle }}
+        </a>
+      </div>
     </div>
   </div>
 </template>
@@ -73,20 +75,29 @@ export default {
     background: $color-secondary--light;
   }
 }
+.section-content {
+  max-width: 600px;
+  margin: auto;
+}
+
+.section-text {
+  text-align: left;
+  margin: auto;
+}
 
 .title {
   font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   display: block;
   font-weight: 300;
-  font-size: 100px;
+  font-size: 2em;
   color: #35495e;
   letter-spacing: 1px;
 }
 
 .subtitle {
   font-weight: 300;
-  font-size: 42px;
+  font-size: 1em;
   color: #526488;
   word-spacing: 5px;
   padding-bottom: 15px;

@@ -2,7 +2,7 @@
   <div class="navbar navbar__container">
     <div class="navbar__left">
       <img class="navbar__left__logo" src="/logo.png" alt="World Vue Logo" />
-      <span class="navbar__left__heading">WORLD VUE</span>
+      <h1 class="navbar__left__heading">WORLD VUE</h1>
     </div>
   </div>
 </template>
@@ -16,7 +16,7 @@
     height: 50px;
     position: relative;
     box-sizing: border-box;
-    background: $color-primary;
+    background: $color-secondary;
   }
 
   &__left {
@@ -31,9 +31,12 @@
 
     &__heading {
       font-weight: bold;
-      color: $color-primary--text;
       padding-left: 5px;
     }
   }
+}
+
+.navbar__left {
+  margin-left: 2em;
 }
 </style>

@@ -4,7 +4,7 @@
   </div>
 </template>
 
-<style>
+<style lang="scss">
 html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -38,7 +38,7 @@ html {
   background-color: #3b8070;
 }
 
-.button--grey {
+/* .links-link {
   display: inline-block;
   border-radius: 4px;
   border: 1px solid #35495e;
@@ -48,8 +48,8 @@ html {
   margin-left: 15px;
 }
 
-.button--grey:hover {
+.links-link:hover {
   color: #fff;
   background-color: #35495e;
-}
+} */
 </style>
