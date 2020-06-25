@@ -1,5 +1,5 @@
 <template>
-  <VParallax class="parallax" dark src="/hero-image2.jpg" height="500">
+  <VParallax class="parallax" dark src="/hero-image2.jpg" height="550">
     <VRow justify="space-around" align="center">
       <VCol cols="4">
         <VRow>
@@ -28,6 +28,9 @@
         <HeroSlider />
       </VCol>
     </VRow>
+    <div class="gradient-container">
+      <div class="gradient" />
+    </div>
   </VParallax>
 </template>
 
@@ -48,5 +51,26 @@ export default {
 }
 .parallax {
   opacity: 0.9;
+  position: relative;
+}
+
+.gradient-container {
+  position: relative;
+  margin-left: -100px;
+  margin-right: -100px;
+
+  .gradient {
+    position: absolute;
+    bottom: -10px;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(
+      0deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(2, 0, 36, 1) 15%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    z-index: 100;
+  }
 }
 </style>

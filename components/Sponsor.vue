@@ -19,7 +19,8 @@
         rounded
         outlined
         color="primary"
-        href="https://www.eventbrite.com/e/vue-global-meetup-tickets-101090117262"
+        href="/World-Vue-Sponsorship-Prospectus.pdf"
+        target="_blank"
         >Sponsor prospectus</VBtn
       >
     </template>
