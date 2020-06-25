@@ -54,7 +54,7 @@
         <content-section
           title="Sponsor Us"
           subtitle="Help Us Help The Community"
-          link-url="https://www.eventbrite.com/e/vue-global-meetup-tickets-101090117262"
+          link-url="/World-Vue-Sponsorship-Prospectus.pdf"
           link-title="Sponsor prospectus"
           bg-color="standard"
         >
