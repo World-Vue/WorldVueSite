@@ -19,19 +19,26 @@
           <VBtn rounded outlined color="white">Discover World Vue</VBtn>
         </VRow>
       </VCol>
-      <VCol cols="4"> </VCol>
+      <VCol cols="5" class="hero-slider-container">
+        <HeroSlider />
+      </VCol>
     </VRow>
   </VParallax>
 </template>
 
 <script>
+import HeroSlider from './HeroSlider'
+
 export default {
-  name: 'Hero'
+  name: 'Hero',
+  components: {
+    HeroSlider
+  }
 }
 </script>
 
 <style lang="scss">
-// .parallax img {
-//   height: 100vh;
-// }
+.hero-slider-container {
+  background-color: rgba(255, 255, 255, 0.2);
+}
 </style>
