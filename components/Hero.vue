@@ -10,7 +10,12 @@
           />
         </VRow>
         <VRow>
-          <h1>World <span>Vue</span></h1>
+          <h1>
+            World
+            <span :style="`color: ${$vuetify.theme.currentTheme.primary}`"
+              >Vue</span
+            >
+          </h1>
         </VRow>
         <VRow>
           <p>Community-led events for the global Vue.js community</p>
@@ -40,5 +45,8 @@ export default {
 <style lang="scss">
 .hero-slider-container {
   background-color: rgba(255, 255, 255, 0.2);
+}
+.parallax {
+  opacity: 0.9;
 }
 </style>

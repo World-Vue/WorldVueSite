@@ -18,7 +18,7 @@
       </VCol>
       <VCol cols="12">
         <slot name="text">
-          <p class="section-text">{{ text }}</p>
+          <p class="text-multi-line">{{ text }}</p>
         </slot>
       </VCol>
       <VCol cols="12">
@@ -56,10 +56,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.section-text {
-  white-space: pre-line;
-  font-size: 0.8em;
-}
 .section-subtitle {
   font-size: 0.65em;
   color: grey;

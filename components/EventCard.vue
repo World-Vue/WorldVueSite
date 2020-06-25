@@ -2,12 +2,12 @@
   <VCard elevation="5">
     <VRow no-gutters style="min-height: 300px">
       <VCol cols="9" class="event-card--left" style="padding-right: 125px">
-        <VRow class="text-start pl-5">
+        <VRow class="pl-5">
           <VCol cols="12">
             <h3>{{ event.title }}</h3>
           </VCol>
           <VCol cols="12">
-            <p class="event-card--left--text">{{ event.text }}</p>
+            <p class="text-multi-line text-left">{{ event.text }}</p>
           </VCol>
           <VCol cols="12">
             <VBtn color="primary" rounded outlined :href="event.actionLink">{{
@@ -17,7 +17,11 @@
         </VRow>
       </VCol>
       <VCol cols="3" class="event-card--right">
-        <VRow class="image-container" no-gutters>
+        <VRow
+          class="image-container"
+          :style="{ 'background-color': $vuetify.theme.currentTheme.secondary }"
+          no-gutters
+        >
           <VImg :src="event.image" />
         </VRow>
       </VCol>
@@ -38,13 +42,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.event-card--left {
-  &--text {
-    white-space: pre-line;
-    font-size: 0.8em;
-    text-align: left;
-  }
-}
 .event-card--right {
   background-color: #4fc08d;
   position: relative;

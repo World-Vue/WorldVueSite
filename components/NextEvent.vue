@@ -1,7 +1,13 @@
 <template>
   <ContentSection subtitle="Don't miss it !" bg-color="#F5F5F5">
     <template v-slot:title>
-      <h2 class="black--text">Next <span>Event</span> !</h2>
+      <h2 class="black--text">
+        Next
+        <span :style="`color: ${$vuetify.theme.currentTheme.primary}`"
+          >Event</span
+        >
+        !
+      </h2>
     </template>
     <template v-slot:text>
       <EventCard :event="event" />
@@ -27,7 +33,8 @@ export default {
               
               Every location can provide a speaker as we broadcast around the world bringing new and seasoned speakers to everyone!`,
         actionText: 'Register',
-        actionLink: '',
+        actionLink:
+          'https://www.eventbrite.com/e/vue-global-meetup-tickets-101090117262',
         image: '/world-vue-header-logo.png'
       }
     }

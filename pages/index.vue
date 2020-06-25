@@ -2,6 +2,9 @@
   <VApp>
     <NavBar />
     <Hero style="margin-top: 48px" />
+    <div class="gradient-container">
+      <div class="gradient" />
+    </div>
     <VMain class="pa-0">
       <VContainer fluid class="pa-0">
         <About />
@@ -29,3 +32,29 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+.text-multi-line {
+  white-space: pre-line;
+  font-size: 0.8em;
+}
+</style>
+
+<style lang="scss" scoped>
+.gradient-container {
+  position: relative;
+
+  .gradient {
+    position: absolute;
+    top: -70px;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(
+      0deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(2, 0, 36, 1) 15%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+}
+</style>

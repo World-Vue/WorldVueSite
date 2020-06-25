@@ -2,11 +2,17 @@
   <ContentSection
     subtitle="Local Meetup Groups United"
     :text="text"
-    bg-color="#07172E"
-    textColor="white"
+    :bg-color="$vuetify.theme.currentTheme.secondary"
+    text-color="white"
   >
     <template v-slot:title>
-      <h2>What is World <span>Vue</span> ?</h2>
+      <h2>
+        What is World
+        <span :style="`color: ${$vuetify.theme.currentTheme.primary}`"
+          >Vue</span
+        >
+        ?
+      </h2>
     </template>
   </ContentSection>
 </template>

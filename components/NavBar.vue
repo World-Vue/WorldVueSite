@@ -1,11 +1,16 @@
 <template>
-  <VAppBar app dense dark>
+  <VAppBar app dense dark color="black">
     <VRow justify="center" align="center">
       <div class="d-inline-flex pl-2">
         <VImg src="/world-vue-mini-white.png" max-width="20" max-height="20" />
       </div>
       <VCol>
-        <p class="ma-0">World <span>Vue</span></p>
+        <p class="ma-0">
+          World
+          <span :style="`color: ${$vuetify.theme.currentTheme.primary}`">
+            Vue
+          </span>
+        </p>
       </VCol>
     </VRow>
   </VAppBar>

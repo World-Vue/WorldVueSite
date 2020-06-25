@@ -6,7 +6,13 @@
     "
   >
     <template v-slot:title>
-      <h2>Become a <span>sponsor</span> !</h2>
+      <h2>
+        Become a
+        <span :style="`color: ${$vuetify.theme.currentTheme.primary}`"
+          >sponsor</span
+        >
+        !
+      </h2>
     </template>
     <template v-slot:action>
       <VBtn
