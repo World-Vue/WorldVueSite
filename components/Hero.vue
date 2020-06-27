@@ -1,29 +1,76 @@
 <template>
-  <div class="hero-image hero-image__container">
-    <div class="hero-image__image-wrapper">
-      <img class="hero-image__image" src="/logo.png" alt="World Vue Logo" />
+  <VParallax class="parallax" dark src="/hero-image2.jpg" height="550">
+    <VRow justify="space-around" align="center">
+      <VCol cols="4">
+        <VRow>
+          <VImg
+            src="/world-vue-header-logo.png"
+            max-width="150"
+            max-height="150"
+          />
+        </VRow>
+        <VRow>
+          <h1>
+            World
+            <span :style="`color: ${$vuetify.theme.currentTheme.primary}`"
+              >Vue</span
+            >
+          </h1>
+        </VRow>
+        <VRow>
+          <p>Community-led events for the global Vue.js community</p>
+        </VRow>
+        <VRow>
+          <VBtn rounded outlined color="white">Discover World Vue</VBtn>
+        </VRow>
+      </VCol>
+      <VCol cols="5" class="hero-slider-container">
+        <HeroSlider />
+      </VCol>
+    </VRow>
+    <div class="gradient-container">
+      <div class="gradient" />
     </div>
-  </div>
+  </VParallax>
 </template>
 
+<script>
+import HeroSlider from './HeroSlider'
+
+export default {
+  name: 'Hero',
+  components: {
+    HeroSlider
+  }
+}
+</script>
+
 <style lang="scss">
-.hero-image {
-  &__container {
-    height: 320px;
-  }
+.hero-slider-container {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.parallax {
+  opacity: 0.9;
+  position: relative;
+}
 
-  &__image-wrapper {
-    display: block;
+.gradient-container {
+  position: relative;
+  margin-left: -100px;
+  margin-right: -100px;
+
+  .gradient {
+    position: absolute;
+    bottom: -10px;
     width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: 50%;
-    background-image: url(/hero-image.jpg);
-    text-align: center;
-  }
-
-  &__image {
-    margin-top: 50px;
+    height: 100px;
+    background: linear-gradient(
+      0deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(2, 0, 36, 1) 15%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    z-index: 100;
   }
 }
 </style>

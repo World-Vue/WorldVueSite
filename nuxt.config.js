@@ -33,8 +33,31 @@ export default {
    */
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module'
+    '@nuxtjs/eslint-module',
+    [
+      '@nuxtjs/vuetify',
+      {
+        theme: {
+          primary: '#4FC08D'
+          // ...
+        }
+      }
+    ]
   ],
+  vuetify: {
+    theme: {
+      themes: {
+        light: {
+          primary: '#4FC08D',
+          secondary: '#07172E'
+        },
+        dark: {
+          primary: '#4FC08D',
+          secondary: '#07172E'
+        }
+      }
+    }
+  },
   /*
    ** Nuxt.js modules
    */
