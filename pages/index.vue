@@ -3,7 +3,7 @@
     <NavBar />
     <Hero style="margin-top: 48px" />
     <VMain>
-      <VContainer fluid class="pa-0">
+      <VContainer fluid>
         <About />
         <NextEvent />
         <Sponsor />
@@ -30,7 +30,8 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-.v-main {
+.v-main,
+.container {
   padding-top: 0 !important;
 }
 </style>
