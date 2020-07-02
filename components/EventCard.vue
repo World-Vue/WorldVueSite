@@ -1,7 +1,7 @@
 <template>
   <VCard elevation="5">
     <VRow no-gutters style="min-height: 300px">
-      <VCol cols="9" class="event-card--left" style="padding-right: 125px">
+      <VCol cols="9" class="event-card--left">
         <VRow class="pl-5">
           <VCol cols="12">
             <h3>{{ event.title }}</h3>
@@ -54,6 +54,28 @@ export default {
     width: 200px;
     height: 200px;
     background-color: #07172e;
+  }
+}
+
+.event-card--left {
+  padding-right: 125px;
+}
+
+@media only screen and (max-width: 600px) {
+  .event-card--left {
+    padding-right: 50px;
+  }
+
+  .event-card--right {
+    .image-container {
+      position: absolute;
+      padding: 25px;
+      left: -50px;
+      top: 50px;
+      width: 100px;
+      height: 100px;
+      background-color: #07172e;
+    }
   }
 }
 </style>
