@@ -63,18 +63,12 @@ export default {
 
 @media only screen and (max-width: 600px) {
   .event-card--left {
-    padding-right: 50px;
+    padding-right: 25px;
   }
 
   .event-card--right {
     .image-container {
-      position: absolute;
-      padding: 25px;
-      left: -50px;
-      top: 50px;
-      width: 100px;
-      height: 100px;
-      background-color: #07172e;
+      display: none;
     }
   }
 }
