@@ -51,8 +51,10 @@ export default {
     padding: 25px;
     left: -100px;
     top: 50px;
-    width: 200px;
-    height: 200px;
+    width: 20vw;
+    height: auto;
+    max-width: 200px;
+    max-height: 200px;
     background-color: #07172e;
   }
 }
