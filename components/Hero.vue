@@ -2,14 +2,14 @@
   <VParallax class="parallax" dark src="/hero-image2.jpg" height="550">
     <VRow justify="space-around" align="center">
       <VCol sm="4">
-        <VRow>
+        <VRow class="justify-center">
           <VImg
             src="/world-vue-header-logo.png"
             max-width="150"
             max-height="150"
           />
         </VRow>
-        <VRow>
+        <VRow class="justify-center">
           <h1>
             World
             <span :style="`color: ${$vuetify.theme.currentTheme.primary}`"
@@ -17,10 +17,10 @@
             >
           </h1>
         </VRow>
-        <VRow>
+        <VRow class="justify-center">
           <p>Community-led events for the global Vue.js community</p>
         </VRow>
-        <VRow>
+        <VRow class="justify-center">
           <VBtn rounded outlined color="white">Discover World Vue</VBtn>
         </VRow>
       </VCol>
