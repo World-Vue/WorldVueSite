@@ -1,7 +1,7 @@
 <template>
   <VParallax class="parallax" dark src="/hero-image2.jpg" height="550">
     <VRow justify="space-around" align="center">
-      <VCol cols="4">
+      <VCol sm="4">
         <VRow>
           <VImg
             src="/world-vue-header-logo.png"
@@ -24,7 +24,7 @@
           <VBtn rounded outlined color="white">Discover World Vue</VBtn>
         </VRow>
       </VCol>
-      <VCol cols="5" class="hero-slider-container">
+      <VCol sm="5" class="hero-slider-container">
         <HeroSlider />
       </VCol>
     </VRow>
@@ -71,6 +71,19 @@ export default {
       rgba(0, 0, 0, 0) 100%
     );
     z-index: 100;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .parallax {
+    height: auto !important;
+    opacity: 0.9;
+    background: #000000;
+
+    .v-parallax__image {
+      left: 0;
+      opacity: 0.3 !important;
+      transform: none !important;
+    }
   }
 }
 </style>

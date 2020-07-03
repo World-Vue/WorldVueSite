@@ -1,5 +1,5 @@
 <template>
-  <VCarousel cycle height="300" hide-delimiter-background show-arrows-on-hover>
+  <VCarousel cycle hide-delimiter-background show-arrows-on-hover>
     <v-carousel-item v-for="(slide, i) in slides" :key="i">
       <VRow class="px-15" align="center" justify="center">
         <VCol cols="12">
@@ -41,7 +41,7 @@ export default {
           text: `Come join our second world wide event. Come to the first ever Vue
               Global Meetup event! We want to bring all Vue communities together
               and create a place where we can all share resources and knowledge.
-              
+
               Every location can provide a speaker as we broadcast around the
               world bringing new and seasoned speakers to everyone!`,
           actionText: 'Register',
