@@ -2,8 +2,8 @@
   <VApp>
     <NavBar />
     <Hero style="margin-top: 48px" />
-    <VMain class="pa-0">
-      <VContainer fluid class="pa-0">
+    <VMain>
+      <VContainer fluid>
         <About />
         <NextEvent />
         <Sponsor />
@@ -29,3 +29,9 @@ export default {
   }
 }
 </script>
+<style lang="scss" scoped>
+.v-main,
+.container {
+  padding-top: 0 !important;
+}
+</style>

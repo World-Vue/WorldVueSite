@@ -1,7 +1,8 @@
 <template>
   <VRow justify="center" class="py-12" :style="{ 'background-color': bgColor }">
     <VCol
-      cols="6"
+      cols="12"
+      sm="6"
       justify="center"
       class="text-center"
       :class="`${textColor}--text`"
