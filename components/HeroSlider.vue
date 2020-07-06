@@ -1,5 +1,5 @@
 <template>
-  <VCarousel cycle height="300" hide-delimiter-background show-arrows-on-hover>
+  <VCarousel cycle hide-delimiter-background show-arrows-on-hover>
     <v-carousel-item v-for="(slide, i) in slides" :key="i">
       <VRow class="px-15" align="center" justify="center">
         <VCol cols="12">

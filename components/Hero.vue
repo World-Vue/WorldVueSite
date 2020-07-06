@@ -1,15 +1,15 @@
 <template>
   <VParallax class="parallax" dark src="/hero-image2.jpg" height="550">
     <VRow justify="space-around" align="center">
-      <VCol cols="4">
-        <VRow>
+      <VCol sm="4">
+        <VRow class="justify-center">
           <VImg
             src="/world-vue-header-logo.png"
             max-width="150"
             max-height="150"
           />
         </VRow>
-        <VRow>
+        <VRow class="justify-center">
           <h1>
             World
             <span :style="`color: ${$vuetify.theme.currentTheme.primary}`"
@@ -17,7 +17,7 @@
             >
           </h1>
         </VRow>
-        <VRow>
+        <VRow class="justify-center">
           <p>Community-led events for the global Vue.js community</p>
         </VRow>
         <VRow>
@@ -30,7 +30,7 @@
           >
         </VRow>
       </VCol>
-      <VCol cols="5" class="hero-slider-container">
+      <VCol sm="5" class="hero-slider-container">
         <HeroSlider />
       </VCol>
     </VRow>
@@ -77,6 +77,19 @@ export default {
       rgba(0, 0, 0, 0) 100%
     );
     z-index: 100;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .parallax {
+    height: auto !important;
+    opacity: 0.9;
+    background: #000000;
+
+    .v-parallax__image {
+      left: 0;
+      opacity: 0.3 !important;
+      transform: none !important;
+    }
   }
 }
 </style>
