@@ -20,8 +20,14 @@
         <VRow class="justify-center">
           <p>Community-led events for the global Vue.js community</p>
         </VRow>
-        <VRow class="justify-center">
-          <VBtn rounded outlined color="white">Discover World Vue</VBtn>
+        <VRow>
+          <VBtn
+            rounded
+            outlined
+            color="white"
+            href="https://www.eventbrite.com/e/world-vue-summit-tickets-110528184776"
+            >Join Next Event</VBtn
+          >
         </VRow>
       </VCol>
       <VCol sm="5" class="hero-slider-container">

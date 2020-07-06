@@ -34,19 +34,19 @@ export default {
               world bringing new and seasoned speakers to everyone!`,
           actionText: 'Register',
           actionLink:
-            'https://www.eventbrite.com/e/vue-global-meetup-tickets-101090117262'
+            'https://www.eventbrite.com/e/world-vue-summit-tickets-110528184776'
         },
         {
-          title: 'World Vue Summit 18th of July',
-          text: `Come join our second world wide event. Come to the first ever Vue
-              Global Meetup event! We want to bring all Vue communities together
-              and create a place where we can all share resources and knowledge.
+          title: 'Join our community on Discord!',
+          text: `For our events we use Discord, a chat platform that makes it easy
+              for us to stay connected and share our Vue.js passion with each other.
+              Here you can raise questions to the speakers, connect live with
+              fellow attendees, and chat with Vue.js enthusiasts on an ongoing basis.
 
-              Every location can provide a speaker as we broadcast around the
-              world bringing new and seasoned speakers to everyone!`,
-          actionText: 'Register',
-          actionLink:
-            'https://www.eventbrite.com/e/vue-global-meetup-tickets-101090117262'
+              Come join our VueLand server Discord today, to be part of our growing
+              online community!`,
+          actionText: 'Join Vue Community Discord',
+          actionLink: 'https://vue.land/'
         }
       ]
     }
