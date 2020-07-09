@@ -1,5 +1,5 @@
 <template>
-  <VCard elevation="5">
+  <VCard elevation="5" max-width="900">
     <VRow no-gutters style="min-height: 300px">
       <VCol cols="9" class="event-card--left">
         <VRow class="pl-5">

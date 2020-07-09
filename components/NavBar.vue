@@ -12,6 +12,8 @@
           </span>
         </p>
       </VCol>
+      <VSpacer />
+      <nuxt-link class="pr-4" to="/events">Events</nuxt-link>
     </VRow>
   </VAppBar>
 </template>
