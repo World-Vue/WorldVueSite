@@ -9,38 +9,38 @@
     </VCol>
     <VCol cols="12">
       <h3>Presentations by themes:</h3>
-      <div v-if="filteredPresentationsCount > 0">
+      <VExpansionPanels v-if="filteredPresentationsCount > 0">
         <div
           v-for="(yearPresentation, theme) in presentationFiltered"
           :key="theme"
+          style="width: 100%"
         >
           <div v-if="filteredPresentationsCountByTheme(theme) > 0">
             <!-- Title actually show it like this: Theme (3 presentations) -->
-            <h2>
+            <h2 class="text-decoration-underline mb-3 text-center">
               {{ theme }} ({{ filteredPresentationsCountByTheme(theme) }}
               {{
                 pluralize(
                   'presentation',
                   filteredPresentationsCountByTheme(theme)
                 )
-              }})
+              }}):
             </h2>
             <div
               v-for="(presentations, year) in yearPresentation"
               :key="`${theme}-${year}`"
             >
               <!--<h3>{{ year }}</h3>-->
-              <div
+              <PresentationItem
                 v-for="presentation in presentations"
                 :key="presentation.title"
-              >
-                <PresentationItem :presentation="presentation" :year="year" />
-                <hr class="dashed" />
-              </div>
+                :presentation="presentation"
+                :year="year"
+              />
             </div>
           </div>
         </div>
-      </div>
+      </VExpansionPanels>
       <div v-else>
         <p>No presentation match with the current filters you selected.</p>
       </div>
