@@ -1,15 +1,21 @@
 <template>
   <VCard elevation="5" max-width="900">
     <VRow no-gutters style="min-height: 300px">
-      <VCol cols="9" class="event-card--left">
-        <VRow class="pl-5">
+      <VCol
+        cols="12"
+        md="9"
+        :class="{ 'event-card--left': $vuetify.breakpoint.mdAndUp }"
+      >
+        <VRow class="px-5">
           <VCol cols="12">
             <h3>{{ event.name }} - {{ dateFormat }}</h3>
           </VCol>
           <VCol cols="12">
-            <p class="text-multi-line text-left">{{ event.text }}</p>
+            <p class="text-multi-line text-left">
+              {{ event.text }}
+            </p>
           </VCol>
-          <VCol cols="6">
+          <VCol cols="12" md="6">
             <VBtn
               :color="isUpcoming ? 'primary' : 'secondary'"
               rounded
@@ -21,14 +27,14 @@
               >{{ event.actionText }}</VBtn
             >
           </VCol>
-          <VCol cols="6">
+          <VCol cols="12" md="6">
             <VBtn color="secondary" rounded outlined @click="seeEventDetails"
               >Informations & Schedule</VBtn
             >
           </VCol>
         </VRow>
       </VCol>
-      <VCol cols="3" class="event-card--right">
+      <VCol v-if="$vuetify.breakpoint.mdAndUp" md="3" class="event-card--right">
         <VRow
           class="image-container"
           :style="{ 'background-color': $vuetify.theme.currentTheme.secondary }"
@@ -62,7 +68,7 @@ export default {
   },
   methods: {
     seeEventDetails() {
-      this.$router.push({ query: { details: this.event.name } })
+      this.$router.push({ name: 'Events', query: { details: this.event.name } })
     }
   }
 }
@@ -87,7 +93,7 @@ export default {
 }
 
 .event-card--left {
-  padding-right: 125px;
+  padding-right: 100px;
 }
 
 @media only screen and (max-width: 600px) {

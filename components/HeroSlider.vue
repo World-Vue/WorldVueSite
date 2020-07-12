@@ -1,12 +1,17 @@
 <template>
-  <VCarousel cycle hide-delimiter-background show-arrows-on-hover>
+  <VCarousel cycle height="400" hide-delimiter-background show-arrows-on-hover>
     <v-carousel-item v-for="(slide, i) in slides" :key="i">
       <VRow class="px-15" align="center" justify="center">
         <VCol cols="12">
           <h3>{{ slide.title }}</h3>
         </VCol>
         <VCol cols="12">
-          <p class="text-multi-line">{{ slide.text }}</p>
+          <p
+            class="text-multi-line custom-scroll"
+            style="max-height: 200px; overflow-y: auto;"
+          >
+            {{ slide.text }}
+          </p>
         </VCol>
         <VCol cols="12">
           <VBtn color="primary" rounded :href="slide.actionLink">{{
@@ -53,3 +58,20 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.custom-scroll::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #f5f5f5;
+}
+
+.custom-scroll::-webkit-scrollbar {
+  width: 5px;
+  background-color: #f5f5f5;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  border: 1px solid #555555;
+}
+</style>

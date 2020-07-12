@@ -1,7 +1,7 @@
 <template>
   <VParallax class="parallax" dark src="/hero-image2.jpg" height="550">
     <VRow justify="space-around" align="center">
-      <VCol sm="4">
+      <VCol cols="12" md="4">
         <VRow justify="center">
           <VImg
             src="/world-vue-header-logo.png"
@@ -30,7 +30,7 @@
           >
         </VRow>
       </VCol>
-      <VCol sm="5" class="hero-slider-container">
+      <VCol cols="12" md="5" class="hero-slider-container">
         <HeroSlider />
       </VCol>
     </VRow>

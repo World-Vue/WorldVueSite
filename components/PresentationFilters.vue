@@ -11,7 +11,7 @@
       </VCol>
     </VRow>
     <VRow>
-      <VCol cols="4">
+      <VCol cols="12" sm="6" md="4">
         <VSelect
           v-model="value.theme"
           label="Theme"
@@ -20,7 +20,7 @@
           no-details
         />
       </VCol>
-      <VCol cols="4">
+      <VCol cols="12" sm="6" md="4">
         <VSelect
           v-model="value.year"
           label="Year"
@@ -29,7 +29,7 @@
           no-details
         />
       </VCol>
-      <VCol cols="4">
+      <VCol cols="12" sm="6" md="4">
         <VSelect
           v-model="value.author"
           label="Author"
@@ -38,7 +38,7 @@
           no-details
         />
       </VCol>
-      <VCol cols="4">
+      <VCol cols="12" sm="6" md="4">
         <VSelect
           v-model="value.event"
           label="Event"
@@ -47,7 +47,7 @@
           no-details
         />
       </VCol>
-      <VCol cols="4">
+      <VCol cols="12" sm="6" md="4">
         <VSelect
           v-model="value.country"
           label="Country"
@@ -56,7 +56,7 @@
           no-details
         />
       </VCol>
-      <VCol cols="4">
+      <VCol cols="12" sm="6" md="4">
         <VSelect
           v-model="value.language"
           label="Language"

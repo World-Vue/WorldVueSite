@@ -18,6 +18,7 @@
 <script>
 import ContentSection from './ContentSection'
 import EventCard from './EventCard'
+const events = require('@/assets/json/events.json')
 
 export default {
   name: 'NextEvent',
@@ -27,16 +28,7 @@ export default {
   },
   computed: {
     event() {
-      return {
-        title: 'World Vue Summit - 18th Of July',
-        text: `Come join our second world wide event. Come to the first ever Vue Global Meetup event! We want to bring all Vue communities together and create a place where we can all share resources and knowledge.
-
-              Every location can provide a speaker as we broadcast around the world bringing new and seasoned speakers to everyone!`,
-        actionText: 'Register',
-        actionLink:
-          'https://www.eventbrite.com/e/world-vue-summit-tickets-110528184776',
-        image: '/world-vue-header-logo.png'
-      }
+      return events[0]
     }
   }
 }

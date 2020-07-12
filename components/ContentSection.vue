@@ -2,7 +2,9 @@
   <VRow justify="center" class="py-12" :style="{ 'background-color': bgColor }">
     <VCol
       cols="12"
-      sm="6"
+      sm="9"
+      md="8"
+      lg="6"
       justify="center"
       class="text-center"
       :class="`${textColor}--text`"
