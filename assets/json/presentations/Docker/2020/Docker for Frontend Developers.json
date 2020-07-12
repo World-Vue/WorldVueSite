@@ -6,7 +6,7 @@
 	"country": "Germany",
 	"vueVersion": "any",
 	"event": {
-		"name": "Vue Global Meetup #1",
+		"name": "World Vue Summit #1",
 		"link": "https://www.eventbrite.com/e/vue-global-meetup-tickets-101090117262"
 	},
 	"gitRepository": "https://github.com/fredicious/vue-docker-starter-kit",

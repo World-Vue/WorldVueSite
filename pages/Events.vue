@@ -10,29 +10,40 @@
         class="mt-5"
         justify="center"
       >
-        <EventCard :event="event" />
+        <EventCard :event="event" @seeDetails="showDetailsDialog" />
       </VRow>
     </VCol>
+    <EventDetails
+      v-if="showDetails"
+      v-model="showDetails"
+      :event="eventSelected"
+    />
   </VRow>
 </template>
 
 <script>
 import EventCard from '@/components/EventCard'
+import EventDetails from '@/components/EventDetails'
 const events = require('@/assets/json/events.json')
 
 export default {
   name: 'Events',
   components: {
-    EventCard
+    EventCard,
+    EventDetails
   },
   data() {
     return {
-      events
+      events,
+      showDetails: false,
+      eventSelected: null
     }
   },
-  created() {
-    // const response = await this.$axios.get('/json/events.json')
-    console.log(this.events)
+  methods: {
+    showDetailsDialog(event) {
+      this.eventSelected = event
+      this.showDetails = true
+    }
   }
 }
 </script>

@@ -4,15 +4,31 @@
       <VCol cols="9" class="event-card--left">
         <VRow class="pl-5">
           <VCol cols="12">
-            <h3>{{ event.title }}</h3>
+            <h3>{{ event.title }} - {{ dateFormat }}</h3>
           </VCol>
           <VCol cols="12">
             <p class="text-multi-line text-left">{{ event.text }}</p>
           </VCol>
-          <VCol cols="12">
-            <VBtn color="primary" rounded outlined :href="event.actionLink">{{
-              event.actionText
-            }}</VBtn>
+          <VCol cols="6">
+            <VBtn
+              :color="isUpcoming ? 'primary' : 'secondary'"
+              rounded
+              outlined
+              :disabled="
+                !isUpcoming && event.actionText.toLowerCase() === 'register'
+              "
+              :href="event.actionLink"
+              >{{ event.actionText }}</VBtn
+            >
+          </VCol>
+          <VCol cols="6">
+            <VBtn
+              color="secondary"
+              rounded
+              outlined
+              @click="$emit('seeDetails', event)"
+              >Informations & Schedule</VBtn
+            >
           </VCol>
         </VRow>
       </VCol>
@@ -30,12 +46,22 @@
 </template>
 
 <script>
+import moment from 'moment'
+
 export default {
   name: 'EventCard',
   props: {
     event: {
       type: Object,
       required: true
+    }
+  },
+  computed: {
+    dateFormat() {
+      return moment(this.event.date, 'MM/DD/YYYY').format('MMMM Do YYYY')
+    },
+    isUpcoming() {
+      return moment().isBefore(this.event.date, 'MM/DD/YYYY')
     }
   }
 }
