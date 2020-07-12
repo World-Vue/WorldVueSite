@@ -91,6 +91,19 @@ export default {
       }, 0)
     }
   },
+  watch: {
+    '$route.query.title'(title) {
+      if (!title) {
+        return
+      }
+      this.filters.title = title
+    }
+  },
+  created() {
+    if (this.$route.query.title) {
+      this.filters.title = this.$route.query.title
+    }
+  },
   methods: {
     filterByTheme(presentationByTheme, filters) {
       // presentationByTheme is presentationData object

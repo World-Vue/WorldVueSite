@@ -1,7 +1,7 @@
 [
     {
         
-        "title": "World Vue Summit #2",
+        "name": "World Vue Summit #2",
         "date": "07/18/2020",
         "text": "Come join our second world wide event. Come to the first ever Vue Global Meetup event! We want to bring all Vue communities together and create a place where we can all share resources and knowledge.\n Every location can provide a speaker as we broadcast around the world bringing new and seasoned speakers to everyone!",
         "actionText": "Register",
@@ -58,7 +58,7 @@
     },
     {
         
-        "title": "World Vue Summit #1",
+        "name": "World Vue Summit #1",
         "date": "04/14/2020",
         "text": "The first collaborative event happen in April 2020. Look at what the community can bring to the community !",
         "actionText": "Watch the event",

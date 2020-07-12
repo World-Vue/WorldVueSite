@@ -4,7 +4,7 @@
       <VCol cols="9" class="event-card--left">
         <VRow class="pl-5">
           <VCol cols="12">
-            <h3>{{ event.title }} - {{ dateFormat }}</h3>
+            <h3>{{ event.name }} - {{ dateFormat }}</h3>
           </VCol>
           <VCol cols="12">
             <p class="text-multi-line text-left">{{ event.text }}</p>
@@ -22,11 +22,7 @@
             >
           </VCol>
           <VCol cols="6">
-            <VBtn
-              color="secondary"
-              rounded
-              outlined
-              @click="$emit('seeDetails', event)"
+            <VBtn color="secondary" rounded outlined @click="seeEventDetails"
               >Informations & Schedule</VBtn
             >
           </VCol>
@@ -62,6 +58,11 @@ export default {
     },
     isUpcoming() {
       return moment().isBefore(this.event.date, 'MM/DD/YYYY')
+    }
+  },
+  methods: {
+    seeEventDetails() {
+      this.$router.push({ query: { details: this.event.name } })
     }
   }
 }
