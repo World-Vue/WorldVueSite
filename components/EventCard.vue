@@ -4,7 +4,7 @@
       <VCol
         cols="12"
         md="9"
-        :class="{ 'event-card--left': $vuetify.breakpoint.mdAndUp }"
+        :class="{ 'event-card--left': $breakpoint.mdAndUp }"
       >
         <VRow class="px-5">
           <VCol cols="12">
@@ -34,7 +34,7 @@
           </VCol>
         </VRow>
       </VCol>
-      <VCol v-if="$vuetify.breakpoint.mdAndUp" md="3" class="event-card--right">
+      <VCol v-if="$breakpoint.mdAndUp" md="3" class="event-card--right">
         <VRow
           class="image-container"
           :style="{ 'background-color': $vuetify.theme.currentTheme.secondary }"
