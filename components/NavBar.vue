@@ -5,13 +5,16 @@
         <VImg src="/world-vue-mini-white.png" max-width="20" max-height="20" />
       </div>
       <VCol>
-        <p class="ma-0">
+        <nuxt-link to="/" class="ma-0 text-decoration-none white--text">
           World
           <span :style="`color: ${$vuetify.theme.currentTheme.primary}`">
             Vue
           </span>
-        </p>
+        </nuxt-link>
       </VCol>
+      <VSpacer />
+      <nuxt-link class="pr-4" to="/events">Events</nuxt-link>
+      <nuxt-link class="pr-4" to="/presentations">Presentations</nuxt-link>
     </VRow>
   </VAppBar>
 </template>

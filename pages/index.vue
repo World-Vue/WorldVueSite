@@ -1,20 +1,16 @@
 <template>
-  <VApp>
-    <NavBar />
-    <Hero style="margin-top: 48px" />
-    <VMain>
-      <VContainer fluid>
-        <About />
-        <NextEvent />
-        <Sponsor />
-      </VContainer>
-    </VMain>
-  </VApp>
+  <VRow no-gutters>
+    <VCol cols="12">
+      <Hero style="width: 100%" />
+      <About />
+      <NextEvent />
+      <Sponsor />
+    </VCol>
+  </VRow>
 </template>
 
 <script>
 import Hero from '~/components/Hero.vue'
-import NavBar from '~/components/NavBar.vue'
 import About from '~/components/About.vue'
 import NextEvent from '~/components/NextEvent.vue'
 import Sponsor from '~/components/Sponsor.vue'
@@ -22,7 +18,6 @@ import Sponsor from '~/components/Sponsor.vue'
 export default {
   components: {
     Hero,
-    NavBar,
     About,
     NextEvent,
     Sponsor

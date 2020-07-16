@@ -1,8 +1,26 @@
 <template>
   <div>
-    <nuxt />
+    <VApp>
+      <NavBar />
+      <VMain>
+        <VContainer fluid class="pa-0">
+          <nuxt />
+        </VContainer>
+      </VMain>
+    </VApp>
   </div>
 </template>
+
+<script>
+import NavBar from '~/components/NavBar.vue'
+
+export default {
+  name: 'DefaultLayout',
+  components: {
+    NavBar
+  }
+}
+</script>
 
 <style lang="scss">
 html {

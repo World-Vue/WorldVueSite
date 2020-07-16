@@ -1,22 +1,40 @@
 <template>
-  <VCard elevation="5">
+  <VCard elevation="5" max-width="900">
     <VRow no-gutters style="min-height: 300px">
-      <VCol cols="9" class="event-card--left">
-        <VRow class="pl-5">
+      <VCol
+        cols="12"
+        md="9"
+        :class="{ 'event-card--left': $vuetify.breakpoint.mdAndUp }"
+      >
+        <VRow class="px-5">
           <VCol cols="12">
-            <h3>{{ event.title }}</h3>
+            <h3>{{ event.name }} - {{ dateFormat }}</h3>
           </VCol>
           <VCol cols="12">
-            <p class="text-multi-line text-left">{{ event.text }}</p>
+            <p class="text-multi-line text-left">
+              {{ event.text }}
+            </p>
           </VCol>
-          <VCol cols="12">
-            <VBtn color="primary" rounded outlined :href="event.actionLink">{{
-              event.actionText
-            }}</VBtn>
+          <VCol cols="12" md="6">
+            <VBtn
+              :color="isUpcoming ? 'primary' : 'secondary'"
+              rounded
+              outlined
+              :disabled="
+                !isUpcoming && event.actionText.toLowerCase() === 'register'
+              "
+              :href="event.actionLink"
+              >{{ event.actionText }}</VBtn
+            >
+          </VCol>
+          <VCol cols="12" md="6">
+            <VBtn color="secondary" rounded outlined @click="seeEventDetails"
+              >Informations & Schedule</VBtn
+            >
           </VCol>
         </VRow>
       </VCol>
-      <VCol cols="3" class="event-card--right">
+      <VCol v-if="$vuetify.breakpoint.mdAndUp" md="3" class="event-card--right">
         <VRow
           class="image-container"
           :style="{ 'background-color': $vuetify.theme.currentTheme.secondary }"
@@ -30,12 +48,27 @@
 </template>
 
 <script>
+import moment from 'moment'
+
 export default {
   name: 'EventCard',
   props: {
     event: {
       type: Object,
       required: true
+    }
+  },
+  computed: {
+    dateFormat() {
+      return moment(this.event.date, 'MM/DD/YYYY').format('MMMM Do YYYY')
+    },
+    isUpcoming() {
+      return moment().isBefore(this.event.date, 'MM/DD/YYYY')
+    }
+  },
+  methods: {
+    seeEventDetails() {
+      this.$router.push({ name: 'Events', query: { details: this.event.name } })
     }
   }
 }
@@ -60,7 +93,7 @@ export default {
 }
 
 .event-card--left {
-  padding-right: 125px;
+  padding-right: 100px;
 }
 
 @media only screen and (max-width: 600px) {
