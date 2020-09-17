@@ -30,23 +30,22 @@ export default {
     slides() {
       return [
         {
-          title: 'World Vue Summit 18th of July',
-          text: `Come join our second world wide event. Come to the first ever Vue
-              Global Meetup event! We want to bring all Vue communities together
-              and create a place where we can all share resources and knowledge.
+          title: 'World Vue Summit 29th of October',
+          text: `Come join our third world wide event. We want to bring all Vue.js
+              communities together and create a place where we can all share
+              resources and knowledge.
 
               Every location can provide a speaker as we broadcast around the
               world bringing new and seasoned speakers to everyone!`,
           actionText: 'Register',
           actionLink:
-            'https://www.eventbrite.com/e/world-vue-summit-tickets-110528184776'
+            'https://www.eventbrite.com/e/world-vue-summit-3-tickets-121527651477'
         },
         {
           title: 'Join our community on Discord!',
-          text: `For our events we use Discord, a chat platform that makes it easy
-              for us to stay connected and share our Vue.js passion with each other.
-              Here you can raise questions to the speakers, connect live with
-              fellow attendees, and chat with Vue.js enthusiasts on an ongoing basis.
+          text: `Let's stay connected and share our Vue.js passion with each other.
+              Here you can ask questions, connect live with fellow attendees, and
+              chat with Vue.js enthusiasts on an ongoing basis.
 
               Come join our VueLand server Discord today, to be part of our growing
               online community!`,

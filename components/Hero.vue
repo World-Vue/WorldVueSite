@@ -25,7 +25,7 @@
             rounded
             outlined
             color="white"
-            href="https://www.eventbrite.com/e/world-vue-summit-tickets-110528184776"
+            href="https://www.eventbrite.com/e/world-vue-summit-3-tickets-121527651477"
             >Join Next Event</VBtn
           >
         </VRow>
