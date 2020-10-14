@@ -19,13 +19,22 @@
     ],
     "schedule": [
       {
+        "time": "17:15",
         "meetup": "Vue Montreal",
         "speaker": "Stéphane Reiss",
-        "title": "Will Vue 3 bring the end of Renderless components?"
+        "title": "Will Vue 3 bring the end of Renderless components"
       },
       {
-        "speaker": "Misc Panelists",
-        "title": "We'll be hosting a short and casual \"fireside chat\" where the panelists will answer questions about their relationship to Vue.js, and their learned lessons along the way."
+        "time": "17:45",
+        "meetup": "Vue.s Vienna",
+        "speaker": "Dave Stewart",
+        "title": "Vue Class Store"
+      },
+      {
+        "time": "18:15",
+        "meetup": "Misc",
+        "speaker": "Ben Hong, Sybren Willemot, and Alex Riviere",
+        "title": "Casual Vue.js Discussion (incl Vue 3)"
       }
     ]
   },

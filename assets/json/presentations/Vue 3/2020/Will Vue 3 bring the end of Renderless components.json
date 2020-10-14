@@ -1,0 +1,21 @@
+{
+  "slides": null,
+  "author": "Stéphane Reiss",
+  "sourceLanguage": "English",
+  "city": "Montreal",
+  "country": "Canada",
+  "vueVersion": "3",
+  "event": {
+    "name": "World Vue Summit #3",
+    "link": "https://www.eventbrite.com/e/world-vue-summit-3-tickets-121527651477"
+  },
+  "gitRepository": null,
+  "videoLink": null,
+  "reachSpeaker": {
+    "twitter": null,
+    "github": "https://github.com/T0RAT0RA",
+    "vueDiscord": null,
+    "email": null
+  },
+  "description": "In this talk Stéphane will first explain what are renderless components and when to use them. He will then dive into vue 3 to see how they can survive with the new mechanics."
+}

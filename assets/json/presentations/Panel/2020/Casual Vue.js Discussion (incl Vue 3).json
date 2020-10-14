@@ -1,0 +1,21 @@
+{
+  "slides": null,
+  "author": "Ben Hong, Sybren Willemot, and Alex Riviere",
+  "sourceLanguage": "English",
+  "city": "Misc",
+  "country": "Misc",
+  "vueVersion": "3",
+  "event": {
+    "name": "World Vue Summit #3",
+    "link": "https://www.eventbrite.com/e/world-vue-summit-3-tickets-121527651477"
+  },
+  "gitRepository": null,
+  "videoLink": null,
+  "reachSpeaker": {
+    "twitter": null,
+    "github": null,
+    "vueDiscord": null,
+    "email": null
+  },
+  "description": "We'll be hosting a short and casual \"fireside chat\" where the panelists will answer questions about their relationship to Vue.js, their learned lessons along the way, and the status of Vue 3 and the ecosystem."
+}
