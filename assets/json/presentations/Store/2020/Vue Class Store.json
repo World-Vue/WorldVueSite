@@ -1,0 +1,21 @@
+{
+  "slides": "",
+  "author": "Dave Stewart",
+  "sourceLanguage": "English",
+  "city": "London",
+  "country": "UK",
+  "vueVersion": "2",
+  "event": {
+    "name": "World Vue Summit #3",
+    "link": "https://www.eventbrite.com/e/world-vue-summit-3-tickets-121527651477"
+  },
+  "gitRepository": "",
+  "videoLink": null,
+  "reachSpeaker": {
+    "twitter": "https://twitter.com/dave_stewart",
+    "github": "https://github.com/davestewart",
+    "vueDiscord": "davestewart#4550",
+    "email": ""
+  },
+  "description": "Dave will be discussing how Vue Class Store came about, it's place in the ecosystem, and when and why you might want to use it."
+}
