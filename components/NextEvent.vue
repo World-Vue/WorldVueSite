@@ -3,9 +3,9 @@
     <template v-slot:title>
       <h2 class="black--text">
         Next
-        <span :style="`color: ${$vuetify.theme.currentTheme.primary}`"
-          >Event</span
-        >
+        <span :style="`color: ${$vuetify.theme.currentTheme.primary}`">
+          Event
+        </span>
         !
       </h2>
     </template>

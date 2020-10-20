@@ -1,12 +1,12 @@
 <template>
   <VCard elevation="5" max-width="900">
-    <VRow no-gutters style="min-height: 300px">
+    <VRow no-gutters style="min-height: 350px">
       <VCol
         cols="12"
         md="9"
         :class="{ 'event-card--left': $breakpoint.mdAndUp }"
       >
-        <VRow class="px-5">
+        <VRow class="px-5" align="center" style="height: 100%">
           <VCol cols="12">
             <h3>{{ event.name }} - {{ dateFormat }}</h3>
           </VCol>
