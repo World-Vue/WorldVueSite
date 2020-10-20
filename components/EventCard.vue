@@ -63,7 +63,9 @@ export default {
       return moment(this.event.date, 'MM/DD/YYYY').format('MMMM Do YYYY')
     },
     isUpcoming() {
-      return moment().isBefore(this.event.date, 'MM/DD/YYYY')
+      return moment().isBefore(
+        moment(this.event.date, 'MM/DD/YYYY').format('YYYY-MM-DD')
+      )
     }
   },
   methods: {
