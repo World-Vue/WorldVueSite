@@ -15,7 +15,7 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/pwa": "^3.0.0-0",
-    "moment": "^2.27.0",
+    "moment": "^2.29.1",
     "nuxt": "^2.0.0",
     "nuxt-sass-resources-loader": "^2.0.5"
   },

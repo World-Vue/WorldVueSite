@@ -26,6 +26,7 @@
               :href="event.actionLink"
               >{{ event.actionText }}</VBtn
             >
+            {{ isUpcoming }}
           </VCol>
           <VCol cols="12" md="6">
             <VBtn color="secondary" rounded outlined @click="seeEventDetails"
@@ -63,7 +64,7 @@ export default {
       return moment(this.event.date, 'MM/DD/YYYY').format('MMMM Do YYYY')
     },
     isUpcoming() {
-      return moment().isBefore(this.event.date, 'MM/DD/YYYY')
+      return moment().isBefore(moment(this.event.date, 'MM/DD/YYYY'))
     }
   },
   methods: {
