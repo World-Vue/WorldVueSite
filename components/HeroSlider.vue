@@ -8,7 +8,7 @@
         <VCol cols="12">
           <p
             class="text-multi-line custom-scroll"
-            style="max-height: 200px; overflow-y: auto;"
+            style="max-height: 200px; overflow-y: auto"
           >
             {{ slide.text }}
           </p>

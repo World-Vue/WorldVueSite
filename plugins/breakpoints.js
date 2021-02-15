@@ -17,12 +17,12 @@ const defaults = {
   lgAndDown: true,
   lgAndUp: false,
   xl: false,
-  xlOnly: false,
+  xlOnly: false
 }
 
 // create a property on the prototype of all instances that holds the breakpoint state
 Vue.prototype.$breakpoint = new Vue({
-  data: () => ({ ...defaults }),
+  data: () => ({ ...defaults })
 })
 
 export default function ({ app }) {
@@ -48,6 +48,6 @@ export default function ({ app }) {
         // set the initial value from vuetify
         this.$breakpoint[prop] = this.$vuetify.breakpoint[prop]
       }
-    },
+    }
   })
 }

@@ -1,5 +1,5 @@
 <template>
-  <VRow justify="center" style="max-width: 1100px; margin: auto;">
+  <VRow justify="center" style="max-width: 1100px; margin: auto">
     <VCol cols="12">
       <h1 class="text-center">Presentations</h1>
     </VCol>
