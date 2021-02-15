@@ -3,7 +3,7 @@
     <VRow>
       <VCol cols="12">
         <VTextField
-          v-model="value.title"
+          v-model="propsValue.title"
           label="Filter by title"
           dense
           no-details
@@ -13,7 +13,7 @@
     <VRow>
       <VCol cols="12" sm="6" md="4">
         <VSelect
-          v-model="value.theme"
+          v-model="propsValue.theme"
           label="Theme"
           :items="themes"
           dense
@@ -22,7 +22,7 @@
       </VCol>
       <VCol cols="12" sm="6" md="4">
         <VSelect
-          v-model="value.year"
+          v-model="propsValue.year"
           label="Year"
           :items="years"
           dense
@@ -31,7 +31,7 @@
       </VCol>
       <VCol cols="12" sm="6" md="4">
         <VSelect
-          v-model="value.author"
+          v-model="propsValue.author"
           label="Author"
           :items="getItemsForPresentationKey('author')"
           dense
@@ -40,7 +40,7 @@
       </VCol>
       <VCol cols="12" sm="6" md="4">
         <VSelect
-          v-model="value.event"
+          v-model="propsValue.event"
           label="Event"
           :items="getItemsForPresentationKey('event', 'name')"
           dense
@@ -49,7 +49,7 @@
       </VCol>
       <VCol cols="12" sm="6" md="4">
         <VSelect
-          v-model="value.country"
+          v-model="propsValue.country"
           label="Country"
           :items="getItemsForPresentationKey('country')"
           dense
@@ -58,7 +58,7 @@
       </VCol>
       <VCol cols="12" sm="6" md="4">
         <VSelect
-          v-model="value.language"
+          v-model="propsValue.language"
           label="Language"
           :items="getItemsForPresentationKey('sourceLanguage')"
           dense
@@ -81,7 +81,9 @@ export default {
     }
   },
   data() {
-    return {}
+    return {
+      propsValue: this.value
+    }
   },
   computed: {
     themes() {

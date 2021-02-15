@@ -17,15 +17,15 @@ const defaults = {
   lgAndDown: true,
   lgAndUp: false,
   xl: false,
-  xlOnly: false
+  xlOnly: false,
 }
 
 // create a property on the prototype of all instances that holds the breakpoint state
 Vue.prototype.$breakpoint = new Vue({
-  data: () => ({ ...defaults })
+  data: () => ({ ...defaults }),
 })
 
-export default function({ app }) {
+export default function ({ app }) {
   // init mixins and the watchers if they don't exist yet
   app.mixins = app.mixins || []
   app.watch = app.watch || {}
@@ -33,7 +33,7 @@ export default function({ app }) {
   // create a watcher for each breakpoint
   for (const prop in defaults) {
     // the watcher sets the breakpoint prop to cause an update
-    app.watch[`$vuetify.breakpoint.${prop}`] = function(value) {
+    app.watch[`$vuetify.breakpoint.${prop}`] = function (value) {
       // update our mirrored value properly
       this.$breakpoint[prop] = value
     }
@@ -48,6 +48,6 @@ export default function({ app }) {
         // set the initial value from vuetify
         this.$breakpoint[prop] = this.$vuetify.breakpoint[prop]
       }
-    }
+    },
   })
 }
