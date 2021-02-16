@@ -5,7 +5,7 @@
     :bg-color="$vuetify.theme.currentTheme.secondary"
     text-color="white"
   >
-    <template v-slot:title>
+    <template #title>
       <h2>
         What is World
         <span :style="`color: ${$vuetify.theme.currentTheme.primary}`"
