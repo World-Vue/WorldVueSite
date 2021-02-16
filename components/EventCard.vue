@@ -26,7 +26,6 @@
               :href="event.actionLink"
               >{{ event.actionText }}</VBtn
             >
-            {{ isUpcoming }}
           </VCol>
           <VCol cols="12" md="6">
             <VBtn color="secondary" rounded outlined @click="seeEventDetails"
